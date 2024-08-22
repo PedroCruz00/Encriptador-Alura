@@ -14,29 +14,29 @@
     <main class="container">
         <section class="input-section">
             <div class="top-section"><h2>Ingresa el Texto</h2></div>
-            <textarea class="text-input" placeholder="Escribe aquí..."></textarea>
+            <textarea id="input" class="text-input" placeholder="Escribe aquí..." pattern="[a-z]*"></textarea>
             <div class="action-section">
                 <span class="feed-content"> <i class="fa-solid fa-circle-info"></i> Ingrese únicamente letras minúsculas y sin acentos.</span>
                 <div class="button-section">
-                    <button class="btn-action" id="encrypt">Encriptar <i class="fa-solid fa-lock"></i></button>
-                    <button class="btn-action"  id="decrypt">Desncriptar <i class="fa-solid fa-unlock"></i></button>
+                    <button onclick="handleEncrypt()" class="btn-action" id="encrypt">Encriptar <i class="fa-solid fa-lock"></i></button>
+                    <button onclick="handleDecrypt()" class="btn-action"  id="decrypt">Desncriptar <i class="fa-solid fa-unlock"></i></button>
                 </div>
             </div>
         </section>
 
         <section class="output-section" >
             <div class="top-section"><h2>Resultado</h2></div>
-            <div class="text-input output" >
-              
-                    <img id="no-result-banner" src="/Assets/no-result-banner.svg" alt="banner-no-result">
-                    <p id="not-found">Ningún mensaje fue encontrado <br>
-                    <span> Ingresa el texto que desees encriptar o desencriptar.</span></p>
+            <div class="text-input" id="output" >
 
+                <div id="result">
+                    <img id="no-result-banner" src="/Assets/no-result-banner.svg" alt="banner-no-result">
+                    <p id="not-found">Ningún mensaje fue encontrado <br><span> Ingresa el texto que desees encriptar o desencriptar.</span> </p>
+                </div>
             </div>
             <div class="action-section">
-                <span class="feed-content">  ‎ </span>
+                <span class="feed-content"  id="copyMessage" class="hidden">Texto copiado en portapapeles ‎ </span>
                 <div class="button-section">
-                    <button class="btn-action copy">Copiar Resultado <i id="copy-result-icon" class="fa-regular fa-clone"></i></button>
+                    <button onclick="copyToClipboard()" class="btn-action copy">Copiar Resultado <i id="copy-result-icon" class="fa-regular fa-clone"></i></button>
                 </div>
             </div>
         </section>
@@ -46,14 +46,14 @@
         <div>
             <h3 class="info-footer">Contacto</h3>
             <div class="links">
-                <a href=""><i class="icon-social-media fa-brands fa-github unique-git"></i></a>
-                <a href=""><i class="icon-social-media fa-brands fa-linkedin-in fa-border-radius"></i></a>
+                <a href="https://github.com/PedroCruz00" target="_blank"><i class="icon-social-media fa-brands fa-github unique-git fa-border-radius" ></i></a>
+                <a href="https://linkedin.com/in/pedro-cruz-037309313" target="_blank"><i class="icon-social-media fa-brands fa-linkedin-in fa-border-radius"></i></a>
                 <a href=""><i class="icon-social-media fa-solid fa-envelope fa-border-radius"></i></a>
             </div>
         </div>
         <div>
             <h3 class="info-footer">Ultima Actualización</h3>
-            <p>12 de Julio del 2024</p>
+            <p id="update-date">12 de Julio del 2024</p>
         </div>
 
 
