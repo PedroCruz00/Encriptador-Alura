@@ -1,4 +1,4 @@
-# Encriptador-Alura
+# encriptador-alura
 
 Este proyecto es una aplicación web simple que permite encriptar y desencriptar textos. Fue creado para demostrar conceptos básicos de manipulación de texto y está diseñado para funcionar completamente en el lado del cliente utilizando HTML, CSS y JavaScript.
 
